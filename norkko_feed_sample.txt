@@ -1,0 +1,48 @@
+Siitepölytiedote, kartta
+TILANNE
+10.06.2026
+Turku HH
+Helsinki HH
+Imatra HH
+Kuopio HH
+Vaasa HH
+Oulu H
+Rovaniemi K, H
+Utsjoki K
+
+ENNUSTE
+11.06.2026 - 13.06.2026
+Turku HH
+Helsinki HH
+Imatra HH
+Kuopio HH
+Vaasa HH
+Oulu H
+Rovaniemi K, H
+Utsjoki K
+ 
+Tunnukset: Leppä L, Pähkinäpensas C, Koivu K, Heinät H, Pujo P, Tuoksukki T
+Asteikko: vähän / kohtalaisesti / runsaasti; 
+esim. koivun tilanne: K / KK / KKK
+Keräyspaikkakunnat: Turku, Helsinki, Imatra, Kuopio, Vaasa, Oulu, Rovaniemi, Utsjoki (Kevo) (8)
+
+(TEKSTIT)
+
+Turun yliopiston siitepölytiedote 
+10.06.2026
+
+TILANNE
+Koivun kukinta jatkuu Lapissa. Heinät kukkivat maan eteläosista Etelä-Lappiin ulottuvalla alueella.
+Koivun siitepölymäärät ovat vähäisiä Lapissa.
+Heinien siitepölymäärät vaihtelevat vähäisistä kohtalaisiin maan etelä- ja keskiosissa.  Muualla kukinta-alueella määrät ovat enimmäkseen vähäisiä. 
+Kuusi ja mänty kukkivat koko maassa. Runsaana esiintyvä havupuiden siitepöly näkyy keltaisena kerroksena pinnoilla, mutta aiheuttaa allergiaoireita vain harvoille.
+Sade laskee ilman siitepölymääriä.
+
+
+ENNUSTE
+Koivun kukinta päättyy Etelä-Lapissa ja jatkuu Keski- ja Pohjois-Lapissa. Heinien kukinta jatkuu maan eteläosista Etelä-Lappiin ulottuvalla alueella.
+Koivun siitepölymäärät jäävät Lapissa vähäisiksi.
+Heinien siitepölymäärät ovat enimmäkseen kohtalaisia maan eteläosissa, vaihtelevat vähäisistä kohtalaisiin maan keskiosissa ja ovat vähäisiä Pohjois-Pohjanmaalla, Kainuussa sekä Etelä-Lapissa.
+Sade laskee ilman siitepölymääriä.
+(END)
+© Turun yliopiston siitepölytiedotus 2026

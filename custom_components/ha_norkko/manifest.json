@@ -1,0 +1,12 @@
+{
+  "domain": "ha_norkko",
+  "name": "Norkko Pollen",
+  "codeowners": [
+    "@Aasikki"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Aasikki/ha-norkko",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Aasikki/ha-norkko/issues",
+  "version": "1.0.0"
+}

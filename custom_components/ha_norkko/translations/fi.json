@@ -1,0 +1,19 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Jos tarvitset apua, katso ohjeet täältä: {documentation_url}",
+                "data": {
+                    "location": "Paikkakunta"
+                }
+            }
+        },
+        "error": {
+            "connection": "Yhteyttä palvelimeen ei voitu muodostaa.",
+            "unknown": "Tuntematon virhe tapahtui."
+        },
+        "abort": {
+            "already_configured": "Tämä kohde on jo konfiguroitu."
+        }
+    }
+}
