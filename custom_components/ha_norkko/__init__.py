@@ -42,7 +42,10 @@ async def async_setup_entry(
         coordinator=coordinator,
     )
 
-    await coordinator.async_config_entry_first_refresh()
+    try:
+        await coordinator.async_config_entry_first_refresh()
+    except Exception as err:  # pylint: disable=broad-except
+        LOGGER.warning("First Norkko data refresh failed: %s. Will retry later.", err)
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     entry.async_on_unload(entry.add_update_listener(async_reload_entry))

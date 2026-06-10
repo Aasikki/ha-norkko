@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import re
 import socket
 from typing import Any
@@ -9,7 +10,7 @@ from typing import Any
 import aiohttp
 import async_timeout
 
-from .const import DATA_URL, DEFAULT_POLLEN_ORDER
+from .const import DATA_URL, DEFAULT_POLLEN_ORDER, LOGGER
 
 
 class HaNorkkoApiClientError(Exception):
@@ -46,24 +47,39 @@ class HaNorkkoApiClient:
     ) -> str:
         """Request text data from the feed."""
         try:
-            async with async_timeout.timeout(10):
+            LOGGER.debug("Starting fetch from %s with 60s timeout", url)
+            async with async_timeout.timeout(60):
+                LOGGER.debug("Timeout context entered, making request...")
                 response = await self._session.request(
                     method=method,
                     url=url,
                     headers=headers,
                     json=data,
                 )
+                LOGGER.debug("Request completed, status %s", response.status)
                 _verify_response_or_raise(response)
-                return await response.text()
+                LOGGER.debug("Reading response text...")
+                raw_text = await response.text()
+                LOGGER.debug("Successfully fetched %d bytes from Norkko", len(raw_text))
+                return raw_text
 
+        except asyncio.TimeoutError as exception:
+            msg = f"Timeout error fetching Norkko data - asyncio timeout after 60s: {exception}"
+            LOGGER.error(msg)
+            raise HaNorkkoApiClientCommunicationError(msg) from exception
         except TimeoutError as exception:
-            msg = f"Timeout error fetching Norkko data - {exception}"
+            msg = f"Timeout error fetching Norkko data - timeout: {exception}"
+            LOGGER.error(msg)
             raise HaNorkkoApiClientCommunicationError(msg) from exception
         except (aiohttp.ClientError, socket.gaierror) as exception:
-            msg = f"Error fetching Norkko data - {exception}"
+            msg = (
+                f"Error fetching Norkko data - {type(exception).__name__}: {exception}"
+            )
+            LOGGER.error(msg)
             raise HaNorkkoApiClientCommunicationError(msg) from exception
         except Exception as exception:  # pylint: disable=broad-except
-            msg = f"Unexpected error fetching Norkko data - {exception}"
+            msg = f"Unexpected error fetching Norkko data - {type(exception).__name__}: {exception}"
+            LOGGER.error(msg)
             raise HaNorkkoApiClientError(msg) from exception
 
     @staticmethod

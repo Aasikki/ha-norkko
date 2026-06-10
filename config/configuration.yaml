@@ -1,5 +1,12 @@
-# https://www.home-assistant.io/integrations/default_config/
-default_config:
+# Manually configured integrations for local development
+# Avoid default_config to bypass optional integrations such as go2rtc.
+
+# https://www.home-assistant.io/integrations/http/
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
 
 # https://www.home-assistant.io/integrations/homeassistant/
 homeassistant:
@@ -9,4 +16,4 @@ homeassistant:
 logger:
   default: info
   logs:
-    custom_components.integration_blueprint: debug
+    custom_components.ha_norkko: debug

@@ -1,0 +1,29 @@
+TILANNE
+
+09.06.2024
+
+Helsinki L LLL C CC K KKK H HH P T
+Turku L LL C C K KK H P T
+Kuopio LL LLL CC C KK K HH H P
+Oulu L C K H P T
+Vaasa LL C K HH P
+Imatra L L C K K H
+Rovaniemi C K
+Utsjoki K
+
+ENNUSTE
+
+09.06.2024 - 11.06.2024
+
+Helsinki LL C K KK HH P TT
+Turku L C CCC K HH P T
+Kuopio LL CC K KKK H P
+Oulu L C K H P
+Vaasa L C K H P
+Imatra L CC K H P
+Rovaniemi C K
+Utsjoki K
+
+TUNNUKSET: Leppä (L), Pähkinäpensas (C), Koivu (K), Heinät (H), Pujo (P), Tuoksukki (T)
+
+ASTEIKKO: 0 = ei siitepölyä, 1 = vähän, 2 = kohtalaisesti, 3 = paljon
