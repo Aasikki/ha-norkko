@@ -59,7 +59,7 @@ class HaNorkkoApiClient:
                 LOGGER.debug("Request completed, status %s", response.status)
                 _verify_response_or_raise(response)
                 LOGGER.debug("Reading response text...")
-                raw_text = await response.text(encoding='latin-1')
+                raw_text = await response.text(encoding="latin-1")
                 LOGGER.debug("Successfully fetched %d bytes from Norkko", len(raw_text))
                 return raw_text
 
